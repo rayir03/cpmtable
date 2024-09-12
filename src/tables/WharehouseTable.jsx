@@ -29,6 +29,7 @@ function WharehouseTable() {
 
   return (
     <div>
+        <h1>Wharehouse Total</h1>
       <DataTable columns={columns} data={data} />
         
         

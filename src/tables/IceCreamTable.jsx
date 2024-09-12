@@ -9,21 +9,29 @@ function IceCreamTable() {
             name: "Name",
             selector: (row) => row.name,
             sortable: true,
+            minWidth: "150px"
+            
         },
         {
             name: "Number of Cases",
             selector: (row) => row.numberCases,
             sortable: true,
+            minWidth: "150px"
+           
         },
         {
             name: "Total Minutes",
             selector: (row) => row.minutes,
             sortable: true,
+            minWidth: "150px"
+             
         },
         {
             name: "CPM",
             selector: (row) => row.iceCreamCpm,
             sortable: true,
+            minWidth: "100px"
+             
         }
     ];
 
@@ -98,8 +106,12 @@ function IceCreamTable() {
     ]
 
   return (
-    <div>
-      <DataTable columns={columns} data={data} 
+    <div style={{ width: "100%", overflowX: "auto" }}>
+        <h1>Ice Cream</h1>
+      <DataTable 
+        columns={columns} 
+        data={data} 
+        fixedHeader
       
       />
       <IceCreamTableTotal />
