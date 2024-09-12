@@ -56,8 +56,12 @@ function NonIceCreamTable() {
   return (
     <div>
         <h1>Not Ice Cream</h1>
-      <DataTable columns={columns} data={data}/>
-      <NonIceCreamTableTotal />
+        <DataTable 
+            columns={columns} 
+            data={data} 
+            fixedHeader
+        />
+        <NonIceCreamTableTotal />
     </div>
   )
 }
